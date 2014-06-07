@@ -6,7 +6,7 @@
 
 Name:		python-ironicclient
 Version:	0.1.2
-Release:	5%{?dist}
+Release:	6%{?dist}
 Summary:	Python client for Ironic
 
 License:	ASL 2.0
@@ -57,6 +57,9 @@ sed -i s/REDHATIRONICCLIENTVERSION/%{version}/ ironicclient/__init__.py
 
 
 %changelog
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.1.2-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
 
 * Wed Mar 26 2014 Angus Thomas <athomas@redhat.com> - 0.1.2-5
 - Removed instance of macro in Changelog
