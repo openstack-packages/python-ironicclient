@@ -34,7 +34,8 @@ Requires:	python-lxml
 A python and command line client library for Ironic.
 
 %prep
-%setup -q -n %{name}-%{version}
+%setup -q -n %{name}-%{upstream_version}
+
 
 %patch0001 -p1
 %patch0002 -p1
