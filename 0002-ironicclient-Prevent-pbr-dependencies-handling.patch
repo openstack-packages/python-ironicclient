@@ -1,4 +1,4 @@
-From 5ec74f82ac49a65b2db4880437b3ac65c3535518 Mon Sep 17 00:00:00 2001
+From 5da6dc027a4e5a286435b314a882639f1ccc5e5e Mon Sep 17 00:00:00 2001
 From: Angus Thomas <athomas@redhat.com>
 Date: Thu, 27 Feb 2014 17:13:47 +0000
 Subject: [PATCH 2/2] -Prevent pbr handling dependencies
@@ -13,7 +13,7 @@ Subject: [PATCH 2/2] -Prevent pbr handling dependencies
 
 diff --git a/requirements.txt b/requirements.txt
 deleted file mode 100644
-index 596392d..0000000
+index 1188cf9..0000000
 --- a/requirements.txt
 +++ /dev/null
 @@ -1,8 +0,0 @@
@@ -23,7 +23,7 @@ index 596392d..0000000
 -lxml>=2.3
 -pbr>=0.6,!=0.7,<1.0
 -PrettyTable>=0.7,<0.8
--python-keystoneclient>=0.9.0
+-python-keystoneclient>=0.10.0
 -six>=1.7.0
 diff --git a/setup.py b/setup.py
 index 7363757..09230a0 100644
