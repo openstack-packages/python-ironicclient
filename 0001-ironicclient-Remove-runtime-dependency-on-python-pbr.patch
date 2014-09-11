@@ -1,7 +1,7 @@
-From 6192dbf072dc666db051f22ea48bc8cb6141e6c0 Mon Sep 17 00:00:00 2001
+From d989a82e4fd2c22182bb1d98b7873e540aa73b78 Mon Sep 17 00:00:00 2001
 From: Angus Thomas <athomas@redhat.com>
 Date: Thu, 27 Feb 2014 16:49:05 +0000
-Subject: [PATCH 1/2] Remove runtime dependency on python pbr
+Subject: [PATCH] Remove runtime dependency on python pbr
 
 ---
  ironicclient/__init__.py | 3 +--

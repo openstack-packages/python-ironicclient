@@ -1,7 +1,7 @@
-From 5da6dc027a4e5a286435b314a882639f1ccc5e5e Mon Sep 17 00:00:00 2001
+From 4c8a1c3202976a80d6de9163a829d64d71231e27 Mon Sep 17 00:00:00 2001
 From: Angus Thomas <athomas@redhat.com>
 Date: Thu, 27 Feb 2014 17:13:47 +0000
-Subject: [PATCH 2/2] -Prevent pbr handling dependencies
+Subject: [PATCH] -Prevent pbr handling dependencies
 
 ---
  requirements.txt      |  8 --------
@@ -37,7 +37,7 @@ index 7363757..09230a0 100644
      pbr=True)
 diff --git a/test-requirements.txt b/test-requirements.txt
 deleted file mode 100644
-index f127f80..0000000
+index dcf6f5e..0000000
 --- a/test-requirements.txt
 +++ /dev/null
 @@ -1,11 +0,0 @@
@@ -47,7 +47,7 @@ index f127f80..0000000
 -fixtures>=0.3.14
 -hacking>=0.8.0,<0.9
 -mock>=1.0
--oslosphinx
+-oslosphinx>=2.2.0.0a2
 -python-subunit>=0.0.18
 -sphinx>=1.1.2,!=1.2.0,<1.3
 -testrepository>=0.0.18
