@@ -1,4 +1,4 @@
-From d989a82e4fd2c22182bb1d98b7873e540aa73b78 Mon Sep 17 00:00:00 2001
+From 5296ec609813b0b6b7d1f2c818e7019a6cb7a227 Mon Sep 17 00:00:00 2001
 From: Angus Thomas <athomas@redhat.com>
 Date: Thu, 27 Feb 2014 16:49:05 +0000
 Subject: [PATCH] Remove runtime dependency on python pbr
