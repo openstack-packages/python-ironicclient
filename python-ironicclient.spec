@@ -6,14 +6,12 @@
 
 Name:		python-ironicclient
 Version:	XXX
-Release:	XXX{?dist}
+Release:	XXX%{?dist}
 Summary:	Python client for Ironic
 
 License:	ASL 2.0
 URL:		https://pypi.python.org/pypi/python-ironicclient
 Source0:	http://tarballs.openstack.org/python-ironicclient/python-ironicclient-0.3.1.tar.gz
-
-Patch0001:	0001-ironicclient-Remove-runtime-dependency-on-python-pbr.patch
 
 BuildArch:	noarch
 
@@ -21,21 +19,22 @@ BuildRequires:	python2-devel
 BuildRequires:	python-pbr
 BuildRequires:	python-setuptools
 
-Requires:	python-prettytable
-Requires:	python-keystoneclient
-Requires:	python-six
-Requires:	python-stevedore
 Requires:	python-anyjson
 Requires:	python-httplib2
+Requires:	python-keystoneclient
 Requires:	python-lxml
+Requires:	python-pbr
+Requires:	python-prettytable
+Requires:	python-six
+Requires:	python-stevedore
+Requires:	python-oslo-i18n
+Requires:	python-oslo-utils
 
 %description
 A python and command line client library for Ironic.
 
 %prep
 %setup -q -n %{name}-%{upstream_version}
-
-%patch0001 -p1
 
 # We provide version like this in order to remove runtime dep on pbr.
 sed -i s/REDHATIRONICCLIENTVERSION/%{version}/ ironicclient/__init__.py
