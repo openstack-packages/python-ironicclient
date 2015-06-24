@@ -6,7 +6,7 @@
 
 Name:		python-ironicclient
 Version:	XXX
-Release:	XXX%{?dist}
+Release:	XXX
 Summary:	Python client for Ironic
 
 License:	ASL 2.0
@@ -36,9 +36,6 @@ A python and command line client library for Ironic.
 %prep
 %setup -q -n %{name}-%{upstream_version}
 
-# We provide version like this in order to remove runtime dep on pbr.
-sed -i s/REDHATIRONICCLIENTVERSION/%{version}/ ironicclient/__init__.py
-
 # Remove the requirements file so that pbr hooks don't add it
 # to distutils requires_dist config
 rm -rf {test-,}requirements.txt tools/{pip,test}-requires
@@ -58,34 +55,3 @@ rm -rf {test-,}requirements.txt tools/{pip,test}-requires
 
 
 %changelog
-
-* Thu Oct 16 2014 Angus Thomas <athomas@redhat.com> - 0.3.1-1
-- Rebased to python-ironicclient-0.3.1
-
-* Tue Oct 07 2014 Dan Prince <dprince@redhat.com> - XXX
-- Rebase patches.
-- Remove requirements.txt and test-requirements.txt via the RPM spec
-  file instead of patch files (this is more robust)
-
-* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.1.2-6
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
-
-* Wed Mar 26 2014 Angus Thomas <athomas@redhat.com> - 0.1.2-5
-- Removed instance of macro in Changelog
-- Consistent use of tabs in SPEC file
-
-* Thu Feb 27 2014 Angus Thomas <athomas@redhat.com> - 0.1.2-4
-- Switched to patches made with git
-- Write REDHATIRONICCLIENTVERSION correctly
-- Reordered files section
-
-* Thu Feb 27 2014 Angus Thomas <athomas@redhat.com> - 0.1.2-3
-- Added macro fix to support building on EL6
-
-* Wed Feb 26 2014 Angus Thomas <athomas@redhat.com> - 0.1.2-2
-- Added patches to remove pbr dependency
-- Updated the source URL
-- Removed deletion of python_ironicclient.egg-info
-
-* Tue Feb 25 2014 Angus Thomas <athomas@redhat.com> - 0.1.2-1
-- Initial package.
