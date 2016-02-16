@@ -20,6 +20,7 @@ BuildRequires:	python-pbr
 BuildRequires:	python-setuptools
 
 Requires:	python-anyjson
+Requires:	python-dogpile-cache
 Requires:	python-httplib2
 Requires:	python-keystoneclient
 Requires:	python-lxml
