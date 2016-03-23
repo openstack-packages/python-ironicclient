@@ -1,3 +1,4 @@
+%{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 %if 0%{?rhel} && 0%{?rhel} <= 6
 %{!?__python2: %global __python2 /usr/bin/python2}
 %{!?python2_sitelib: %global python2_sitelib %(%{__python2} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")}
@@ -5,13 +6,13 @@
 %endif
 
 Name:		python-ironicclient
-Version:	XXX
-Release:	XXX
+Version:	1.2.0
+Release:	1%{?dist}
 Summary:	Python client for Ironic
 
 License:	ASL 2.0
 URL:		https://pypi.python.org/pypi/python-ironicclient
-Source0:	http://tarballs.openstack.org/python-ironicclient/python-ironicclient-0.3.1.tar.gz
+Source0:	http://tarballs.openstack.org/python-ironicclient/python-ironicclient-%{version}%{?milestone}.tar.gz
 
 BuildArch:	noarch
 
@@ -56,3 +57,5 @@ rm -rf {test-,}requirements.txt tools/{pip,test}-requires
 
 
 %changelog
+* Wed Mar 23 2016 RDO <rdo-list@redhat.com> 1.2.0-0.1
+-  Rebuild for Mitaka 
