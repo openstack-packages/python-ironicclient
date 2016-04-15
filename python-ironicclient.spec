@@ -5,16 +5,16 @@
 %{!?python2_sitearch: %global python2_sitearch %(%{__python2} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib(1))")}
 %endif
 
-Name:		python-ironicclient
-Version:	1.2.0
-Release:	1%{?dist}
-Summary:	Python client for Ironic
+Name:           python-ironicclient
+Version:        1.2.0
+Release:        2%{?dist}
+Summary:        Python client for Ironic
 
-License:	ASL 2.0
-URL:		https://pypi.python.org/pypi/python-ironicclient
-Source0:	http://tarballs.openstack.org/python-ironicclient/python-ironicclient-%{version}%{?milestone}.tar.gz
+License:        ASL 2.0
+URL:            https://pypi.python.org/pypi/python-ironicclient
+Source0:        http://tarballs.openstack.org/python-ironicclient/python-ironicclient-%{version}%{?milestone}.tar.gz
 
-BuildArch:	noarch
+BuildArch:      noarch
 
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr >= 1.6
@@ -61,5 +61,8 @@ rm -rf {test-,}requirements.txt tools/{pip,test}-requires
 
 
 %changelog
+* Fri Apr 15 2016 Haïkel Guémar <hguemar@fedoraproject.org> - 1.2.0-2
+- Fix dependencies
+
 * Wed Mar 23 2016 RDO <rdo-list@redhat.com> 1.2.0-0.1
--  Rebuild for Mitaka 
+-  Rebuild for Mitaka
