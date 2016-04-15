@@ -16,21 +16,25 @@ Source0:	http://tarballs.openstack.org/python-ironicclient/python-ironicclient-%
 
 BuildArch:	noarch
 
-BuildRequires:	python2-devel
-BuildRequires:	python-pbr
-BuildRequires:	python-setuptools
+BuildRequires:  python2-devel
+BuildRequires:  python-pbr >= 1.6
+BuildRequires:  python-setuptools
 
-Requires:	python-anyjson
-Requires:	python-dogpile-cache
-Requires:	python-httplib2
-Requires:	python-keystoneclient
-Requires:	python-lxml
-Requires:	python-pbr
-Requires:	python-prettytable
-Requires:	python-six
-Requires:	python-stevedore
-Requires:	python-oslo-i18n
-Requires:	python-oslo-utils
+Requires:       python-anyjson
+Requires:       python-appdirs >= 1.3.0
+Requires:       python-cliff
+Requires:       python-dogpile-cache >= 0.5.7
+Requires:       python-httplib2
+Requires:       python-openstackclient >= 2.1.0
+Requires:       python-keystoneauth1 >= 2.1.0
+Requires:       python-lxml
+Requires:       python-pbr >= 1.6
+Requires:       python-prettytable
+Requires:       python-six >= 1.9.0
+Requires:       python-stevedore
+Requires:       python-oslo-i18n >= 2.1.0
+Requires:       python-oslo-utils >= 3.5.0
+
 
 %description
 A python and command line client library for Ironic.
